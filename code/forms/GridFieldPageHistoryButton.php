@@ -1,12 +1,14 @@
 <?php
-class GridFieldPageHistoryButton extends GridFieldViewButton {
+class GridFieldPageHistoryButton extends GridFieldViewButton
+{
     /**
      * @param GridField $gridField
      * @param DataObject $record
      * @param string $columnName
      * @return string - the HTML for the column
      */
-    public function getColumnContent($gridField, $record, $columnName) {
+    public function getColumnContent($gridField, $record, $columnName)
+    {
         if (!$record->canEdit()) {
             return;
         }
